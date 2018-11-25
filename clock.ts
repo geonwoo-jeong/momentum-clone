@@ -13,8 +13,8 @@ function getTime() {
   clockTitle.innerHTML = `${hours}:${minutes}:${seconds}`;
 }
 
-function init() {
+function initClock() {
   setInterval(getTime, 1000);
 }
 
-init();
+initClock();

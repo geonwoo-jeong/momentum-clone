@@ -9,7 +9,7 @@ function getTime() {
     var seconds = addZero(date.getSeconds());
     clockTitle.innerHTML = hours + ":" + minutes + ":" + seconds;
 }
-function init() {
+function initClock() {
     setInterval(getTime, 1000);
 }
-init();
+initClock();

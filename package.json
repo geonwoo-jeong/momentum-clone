@@ -3,6 +3,6 @@
     "typescript": "^3.1.6"
   },
   "scripts": {
-    "start": "tsc clock.ts"
+    "start": "tsc clock.ts greeting.ts"
   }
 }
