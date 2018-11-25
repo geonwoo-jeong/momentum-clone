@@ -3,6 +3,6 @@
     "typescript": "^3.1.6"
   },
   "scripts": {
-    "start": "tsc src/clock.ts src/greetings.ts src/todo.ts src/bg.ts --outDir dist/"
+    "start": "tsc src/clock.ts src/greetings.ts src/todo.ts src/bg.ts src/weather.ts --outDir dist/"
   }
 }
