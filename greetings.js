@@ -22,7 +22,6 @@ var greetings = (function () {
     }
     function loadName() {
         var currentUser = localStorage.getItem(USER_LS);
-        console.log(currentUser);
         if (currentUser === null) {
             askForName();
         }
