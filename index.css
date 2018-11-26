@@ -7,8 +7,63 @@
   }
 }
 
+* {
+  all: unset;
+}
+
+title {
+  display: none;
+}
+
 body {
   background-color: #ecf0f1;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr;
+}
+
+header {
+  display: grid;
+  grid-auto-rows: 1rem;
+  justify-content: right;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  color: white;
+  font-weight: 400;
+}
+
+input::placeholder {
+  color: white;
+  font-weight: 500;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.name {
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.todo,
+.input-todo {
+  text-decoration-line: underline;
+}
+
+.center {
+  display: grid;
+  place-content: center;
+  color: white;
+}
+
+.clock {
+  text-align: center;
+  color: white;
+  font-size: 7rem;
+  font-weight: 600;
 }
 
 .btn {
@@ -28,7 +83,6 @@ h1 {
 .greetings {
   display: none;
 }
-
 .showing {
   display: block;
 }
