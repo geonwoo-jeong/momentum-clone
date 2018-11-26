@@ -57,7 +57,7 @@ var weather = (function () {
                     case 2:
                         json = _a.sent();
                         temp = json.main.temp, name_1 = json.name;
-                        weather.innerText = temp + " @ " + name_1;
+                        weather.innerText = temp + "\u00B0 @ " + name_1;
                         return [3 /*break*/, 4];
                     case 3:
                         error_1 = _a.sent();

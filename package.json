@@ -1,10 +1,16 @@
 {
   "devDependencies": {
+    "@types/node-static": "^0.7.2",
     "typescript": "^3.1.6",
     "uglify-js": "^3.4.9"
   },
   "scripts": {
-    "start": "tsc src/clock.ts src/greetings.ts src/todo.ts src/bg.ts src/weather.ts src/sw.ts --outDir dist/",
+    "start": "node server.js",
+    "tsc": "tsc src/clock.ts src/greetings.ts src/todo.ts src/bg.ts src/weather.ts src/service-worker.ts src/register.ts --outDir dist/",
+    "sw": "tsc src/sw.ts --outDir ./",
     "uglify": "uglifyjs --compress --mangle --output dist/bg.js -- dist/bg.js && uglifyjs --compress --mangle --output dist/clock.js -- dist/clock.js && uglifyjs --compress --mangle --output dist/greetings.js -- dist/greetings.js && uglifyjs --compress --mangle --output dist/todo.js -- dist/todo.js && uglifyjs --compress --mangle --output dist/weather.js -- dist/weather.js"
+  },
+  "dependencies": {
+    "node-static": "^0.7.11"
   }
 }

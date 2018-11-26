@@ -20,7 +20,7 @@ var greetings = (function () {
         greetings.classList.add(SHOWING_CN);
         greetings.innerHTML = "Hello " + text;
     }
-    function loadName() {
+    function init() {
         var currentUser = localStorage.getItem(USER_LS);
         if (currentUser === null) {
             askForName();
@@ -29,5 +29,5 @@ var greetings = (function () {
             paintGreetings(currentUser);
         }
     }
-    loadName();
+    init();
 })();

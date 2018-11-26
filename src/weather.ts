@@ -25,7 +25,7 @@ const weather = (function() {
         main: { temp },
         name
       } = json;
-      weather.innerText = `${temp} @ ${name}`;
+      weather.innerText = `${temp}° @ ${name}`;
     } catch (error) {
       console.log(error);
     }

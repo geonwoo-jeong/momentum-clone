@@ -29,7 +29,7 @@ const greetings = (function() {
     greetings.innerHTML = `Hello ${text}`;
   }
 
-  function loadName() {
+  function init() {
     const currentUser = localStorage.getItem(USER_LS);
 
     if (currentUser === null) {
@@ -39,5 +39,5 @@ const greetings = (function() {
     }
   }
 
-  loadName();
+  init();
 })();
