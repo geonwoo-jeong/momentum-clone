@@ -3,7 +3,7 @@ const clock = (function() {
   const clockContainer = <HTMLDivElement>doc.querySelector(".js-clock"),
     clockTitle = <HTMLHeadingElement>clockContainer.querySelector("h1");
 
-  function addZero(number) {
+  function addZero(number: number) {
     return number < 10 ? `0${number}` : number;
   }
 

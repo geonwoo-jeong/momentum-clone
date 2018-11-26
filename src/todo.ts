@@ -1,7 +1,7 @@
 const todo = (function() {
   interface ToDoObj {
     id: string;
-    text: String;
+    text: string;
   }
 
   const doc = <HTMLDocument>document;
@@ -12,7 +12,7 @@ const todo = (function() {
   const TODOS_LS = "toDos";
   let toDos: ToDoObj[] = [];
 
-  function removeToDo(event) {
+  function removeToDo(event: any) {
     const li = event.target.parentNode;
     list.removeChild(li);
     const cleanToDos = toDos.filter(todo => todo.id !== li.id);
@@ -24,7 +24,7 @@ const todo = (function() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
   }
 
-  function paintTodo(text) {
+  function paintTodo(text: string) {
     const li = <HTMLLIElement>doc.createElement("li"),
       delBtn = <HTMLButtonElement>doc.createElement("button"),
       span = <HTMLSpanElement>doc.createElement("span"),
@@ -48,7 +48,7 @@ const todo = (function() {
     setToDos();
   }
 
-  function handleSubmit(event) {
+  function handleSubmit(event: any) {
     event.preventDefault();
     const currentValue = input.value;
     paintTodo(currentValue);

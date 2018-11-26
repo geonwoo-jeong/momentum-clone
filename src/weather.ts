@@ -15,10 +15,10 @@ const weather = (function() {
     timeout: 5000
   };
 
-  async function getWeather(latitude, longitude) {
+  async function getWeather(latitude: number, longitude: number) {
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}8&appid=${API_KEY}&units=metric`
       );
       const json = await response.json();
       const {
@@ -31,7 +31,7 @@ const weather = (function() {
     }
   }
 
-  function setCoords(coordsObj) {
+  function setCoords(coordsObj: Coords) {
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
   }
 

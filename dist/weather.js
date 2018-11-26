@@ -50,7 +50,7 @@ var weather = (function () {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 3, , 4]);
-                        return [4 /*yield*/, fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + API_KEY + "&units=metric")];
+                        return [4 /*yield*/, fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "8&appid=" + API_KEY + "&units=metric")];
                     case 1:
                         response = _a.sent();
                         return [4 /*yield*/, response.json()];

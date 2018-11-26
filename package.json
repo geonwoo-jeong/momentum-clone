@@ -1,8 +1,10 @@
 {
   "devDependencies": {
-    "typescript": "^3.1.6"
+    "typescript": "^3.1.6",
+    "uglify-js": "^3.4.9"
   },
   "scripts": {
-    "start": "tsc src/clock.ts src/greetings.ts src/todo.ts src/bg.ts src/weather.ts --outDir dist/"
+    "start": "tsc src/clock.ts src/greetings.ts src/todo.ts src/bg.ts src/weather.ts src/sw.ts --outDir dist/",
+    "uglify": "uglifyjs --compress --mangle --output dist/bg.js -- dist/bg.js && uglifyjs --compress --mangle --output dist/clock.js -- dist/clock.js && uglifyjs --compress --mangle --output dist/greetings.js -- dist/greetings.js && uglifyjs --compress --mangle --output dist/todo.js -- dist/todo.js && uglifyjs --compress --mangle --output dist/weather.js -- dist/weather.js"
   }
 }
