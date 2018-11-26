@@ -7,11 +7,11 @@ const greetings = (function() {
   const USER_LS = "currentUser",
     SHOWING_CN = "showing";
 
-  function setName(name) {
+  function setName(name: string) {
     localStorage.setItem(USER_LS, name);
   }
 
-  function handleSubmit(event) {
+  function handleSubmit(event: any) {
     event.preventDefault();
     const currentName = input.value;
     paintGreetings(currentName);
@@ -23,7 +23,7 @@ const greetings = (function() {
     form.addEventListener("submit", handleSubmit);
   }
 
-  function paintGreetings(text) {
+  function paintGreetings(text: string) {
     form.classList.remove(SHOWING_CN);
     greetings.classList.add(SHOWING_CN);
     greetings.innerHTML = `Hello ${text}`;
