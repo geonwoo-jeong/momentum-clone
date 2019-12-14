@@ -4,13 +4,20 @@
     "typescript": "^3.1.6",
     "uglify-js": "^3.4.9"
   },
+  "files": [
+    "src/"
+  ],
   "scripts": {
-    "start": "node server.js",
+    "start": "parcel serve src/index.html",
     "tsc": "tsc src/clock.ts src/greetings.ts src/todo.ts src/bg.ts src/weather.ts src/service-worker.ts src/register.ts --outDir dist/",
     "sw": "tsc src/sw.ts --outDir ./",
-    "uglify": "uglifyjs --compress --mangle --output dist/bg.js -- dist/bg.js && uglifyjs --compress --mangle --output dist/clock.js -- dist/clock.js && uglifyjs --compress --mangle --output dist/greetings.js -- dist/greetings.js && uglifyjs --compress --mangle --output dist/todo.js -- dist/todo.js && uglifyjs --compress --mangle --output dist/weather.js -- dist/weather.js"
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url .",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "node-static": "^0.7.11"
+    "cross-env": "^6.0.3",
+    "gh-pages": "^2.1.1",
+    "node-static": "^0.7.11",
+    "parcel-bundler": "^1.12.4"
   }
 }
